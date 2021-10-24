@@ -1,16 +1,16 @@
 package com.company;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        new Main().run();
+
+        IStudentStringConverter iStudentStringConverter = new Main().randomConverter();
+        System.out.println(iStudentStringConverter.convert(new Student("Mary", 21 , new BigDecimal("3.14"))));
     }
 
-    private void run() {
-        IStudentStringConverter jsonConverter = new StudentJsonConverter();
-        IStudentStringConverter xmlConverter = new StudentXmlConverter();
-    }
     private IStudentStringConverter randomConverter() {
         double random = Math.random();
         if (random > 0.66) {
