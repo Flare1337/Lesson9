@@ -36,4 +36,9 @@ public class Student {
     public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return String.format("name=%s\nage=%d\nsalary=%f ", name, age, salary);
+    }
 }
